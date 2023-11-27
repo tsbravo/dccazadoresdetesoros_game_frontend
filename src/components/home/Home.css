@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'EnchantedLand';
+    font-family: 'Enchanted-Land';
     src: url('../../assets/fonts/enchanted_land/Enchanted-Land.ttf') format("truetype");
 }
 
@@ -7,7 +7,7 @@
     margin-top: 3em;
     text-align: center;
     margin-bottom: 0%;
-    font-family: 'EnchantedLand';
+    font-family: 'Enchanted-Land';
     font-size: 55px;
     color: white;
 }

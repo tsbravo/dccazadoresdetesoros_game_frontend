@@ -4,3 +4,18 @@ body{
     background-attachment: fixed;
 }
 
+@font-face {
+    font-family: 'Enchanted-Land';
+    font-display: fallback;
+    src: url('/fonts/Enchanted-Land.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'Deutsch-gothic';
+    font-display: fallback;
+    src: url('/fonts/deutsch.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'Augusta';
+    font-display: fallback;
+    src: url('/fonts/augusta.ttf') format("truetype");
+}
