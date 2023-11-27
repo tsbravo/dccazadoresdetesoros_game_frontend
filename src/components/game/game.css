@@ -1,0 +1,102 @@
+.game-container {
+    margin-top: 50PX;
+    display: flex;
+  }
+  
+.board {
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.panel {
+  flex: 0.55;
+}
+
+.mensaje {
+  font-family: 'Enchanted land';
+  color: #fff;
+}
+
+.popup-text {
+  background-color: blanchedalmond;
+}
+
+.popup {
+  position: 'absolute';
+  top: 0;
+  z-index: 1000;
+}
+
+.titulo {
+  font-family: 'Enchanted land';
+  color: #fff;
+  font-size: 2em;
+  margin-top: 3em;
+  margin-bottom: 0%;
+  max-width: 300px;
+  border-radius: 5px;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.foto-dado {
+    background-image: url('/imgs/dado.jpg');
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.layout-botones {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 100px;
+    margin-top: 2%;
+}
+
+.button-juego {
+    display: flex;
+    font-family: 'Enchanted land';
+    font-size: 25px;
+    margin: 2%;
+    align-items: center;
+}
+
+.botones button {
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #df9d3b;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.botones button:hover {
+background-color: #3f2b15;
+}
+
+.selectedButton {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+
+
+@media (max-width: 1200px) {
+  .game-container {
+    flex-direction: column;
+  }
+  .board{
+    max-width: 90%;
+    align-self: center;
+  }
+  .foto-dado{
+    display: none;
+  }
+}

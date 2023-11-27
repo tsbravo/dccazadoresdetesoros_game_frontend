@@ -1,0 +1,150 @@
+.board-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.hex-row-1 {
+    display: flex;
+    margin-top: -13px;
+}
+.hex-row-2 {
+    display: flex;
+    margin-left: 28px;
+    margin-top: -13px;
+}
+
+.hex {
+    width: 50px;
+    height: 50px;
+    background-color: #090303;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 2px;
+}
+
+#hex-1 {
+    background-color: #301bed;
+}
+
+#hex-13 {
+    background-color: #ed1b1b;
+}
+
+#hex-105 {
+    background-color: #089910;
+}
+
+#hex-117 {
+    background-color: #aeed1b;
+}
+
+.ficha-jugador-1 {
+    background-color: #301bedb8;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.ficha-jugador-2 {
+    background-color: #ed1b1baf;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.ficha-jugador-3 {
+    background-color: #08990fa5;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.ficha-jugador-4 {
+    background-color: #aeed1b9e;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.green {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 2px;
+    background-color: rgb(68, 143, 98);
+}
+
+.blue {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 2px;
+    background-color: rgb(85, 135, 151);
+}
+
+.brown {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 2px;
+    background-color: rgb(128, 94, 65);
+}
+
+.grey {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 2px;
+    background-color: rgb(162, 159, 156);
+}
+
+.red {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 2px;
+    background-color: rgb(197, 83, 60);
+}
+
+
+.unlocked-cell {
+    width: 50px;
+    height: 50px;
+    background-color: #090303;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 2px;
+    background-color: rgba(255, 255, 255, 0.678);
+    cursor: pointer;
+  }
+
+@media (max-width: 1000px) {
+    .hex-row-1 {
+        margin-right: 4%;
+        margin-top: -2%;
+    }
+    .hex-row-2 {
+        margin-left: 4%;
+        margin-top: -2%; 
+    }
+    .hex {
+        width: 5vw;
+        height: 5vw;
+        margin: 0.3%;
+    }
+}

@@ -1,0 +1,141 @@
+.general-container {
+    display: flex;
+}
+
+.turno-container {
+    margin-top: 20px;
+}
+
+.energia-container {
+    background-color:  blanchedalmond;
+    justify-content: center;
+    text-align: left;
+    flex: 1;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.experiencia-container,
+.recursos-container,
+.hechizos-container,
+.pociones-container,
+.tesoro-container {
+    background-color: blanchedalmond;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.columnas-container {
+    display: flex;
+    justify-content: center;
+}
+
+.columna{
+    justify-content: center;
+    flex: 6;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.columna-energia{
+    justify-content: center;
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.columna:last-child {
+    flex: 4;
+}
+
+.linea-boton {
+    display: flex;
+    max-width: 280px;
+    
+}
+
+.button-creacion{
+    font-family: 'Enchanted land';
+    font-size: 1em;
+}
+
+h4 {
+    margin: 0;
+    margin-left: 10px;
+    font-family: 'Augusta';
+    font-size: 18px;
+}
+
+div h2 {
+    margin: 0%;
+    text-align: center;
+    padding: 1%;
+    font-family: 'Enchanted land';
+    font-size: 1.5em;
+    
+}
+
+.tesoro-container {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #df9e3bd4;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #3f2b15;
+}
+
+.recursos-container{
+    height: 62%;
+    margin-left: 0%;
+
+}
+.experiencia-container{
+    margin-left: 0%;
+}
+
+.ficha-color-1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: blue;
+    margin-right: 10px; 
+}
+
+.ficha-color-2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 10px; 
+}
+
+.ficha-color-3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 10px; 
+}
+
+.ficha-color-4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+    margin-right: 10px; 
+}

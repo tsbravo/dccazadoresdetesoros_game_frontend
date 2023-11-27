@@ -1,0 +1,171 @@
+.selection-container{
+    margin-top: 190px;
+    text-align: center;
+}
+
+#texto-wait{
+    margin-top: 3em;
+    color: #ffffff;
+    font-family: 'Deutsch gothic';
+    font-size: 50px;
+    text-align: center;
+}
+
+.texto-wait{
+    color: #ffffff;
+    font-family: 'Deutsch gothic';
+    font-size: 60px;
+    text-align: center;
+    background-color: #314e52;
+    border-radius: 15px;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.players-text{
+    font-family: 'Enchanted land';
+    font-size: 40px;
+    margin: 20px;
+}
+
+.players-text-wait{
+    font-family: 'Augusta';
+    font-size: 30px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.map-container{
+    background-color: #314e52;
+    display: flex;
+    margin-top: 1em;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2em 2em 2em 2em;
+    justify-content: center;
+}
+
+.mapa1, .mapa2{
+    margin: 10px 10px 10px 10px;
+    justify-items: center;
+    text-align: center;
+}
+
+.img1, .img2{
+    width: 55vh;
+    border-radius: 15px;
+    border: solid 3px black;
+    justify-items: center;
+}
+
+.img1:hover{
+    cursor: pointer;
+    border: solid 3px #3bb335;
+}
+
+.img2:hover{
+    cursor: pointer;
+    border: solid 3px #3bb335;
+}
+
+.descripcion{
+    color: #ffffff;
+    font-family: 'Augusta';
+    font-size: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.button-mapa1, .button-mapa2{
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.boton-volver {
+    background-color: #df9d3b;
+    font-family: 'Enchanted land';
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 1em;
+}
+
+.boton-volver:hover {
+    background-color: #3f2b15; 
+}
+
+.jugar{
+    margin-right: 1em;
+}
+
+@media (max-width: 800px) {
+    .map-container {
+        flex-direction: column; 
+    }
+    .descripcion {
+        font-size: 1.5em;
+    }
+    .boton-volver {
+        font-size: 30px; 
+    }
+    #texto {
+        margin-top: 160px;
+    }
+}
+
+.img1, .img2 {
+    max-width: 100%;
+    height: auto;
+}
+
+.div-botones-land{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 1em;
+}
+
+.players-container {
+    margin-top: 130px;
+    padding-top: 4em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 15px;
+    /* background-color: #314e52; */
+}
+
+.text-players-container{
+    background-color: blanchedalmond;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding: 1em;
+    border-radius: 15px;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.mostrar-boton {
+    display: block;
+}
+  
+.ocultar-boton {
+    display: none;
+}
+
+.sin-margen{
+    margin-top: 10px;
+}
+
+.titulo-sala{
+    font-size: 50px;
+    color: white;
+    background-color: #314e52;
+    border-radius: 15px;
+}

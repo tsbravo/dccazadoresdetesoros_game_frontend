@@ -1,0 +1,80 @@
+.nav-main{
+    display: flex;
+    background-color: #314e52;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.nav-main .nav-item{
+    color: #ffffff;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+.nav-main .nav-item div{
+    background-color: inherit;
+    padding: 20px 20px 20px 20px;
+}
+
+.nav-main .nav-item div:focus{
+    background-color: #4a676b;
+    border-radius: 6px;
+}
+
+.nav-main .nav-item div:hover{
+    background-color: #4a676b;
+    border-radius: 6px;
+}
+
+#letras-logo{
+    font-family: 'Enchanted Land';
+    font-size: 2em;
+    color: #ffffff;
+    text-decoration: none;
+    align-self: left;
+}
+
+#boton-jugar{
+    background-color: #3e6c72;
+    border-radius: 6px;
+    margin-top: 25px;
+}
+
+#boton-jugar:hover {
+    background-color: #56999b;
+}
+
+.g-derecha{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: inherit;
+    padding-right: 1em;
+}
+
+.g-izquierda{
+    display: flex;
+    background-color: inherit;
+    justify-content: flex-end;
+}
+
+.nav-item.active{
+    border-bottom: solid 3px #ffffff;
+    
+}
+
+#item{
+    font-family: 'Enchanted land';
+    font-size: 30px;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-main{
+        flex-direction: column;
+    }
+}

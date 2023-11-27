@@ -1,0 +1,108 @@
+.about{
+    text-align: center;
+    margin: 2%;
+}
+
+.title-about{
+    font-family: 'Deutsch gothic';
+    font-weight: bolder;
+    font-size: 3em;
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 0%;
+}
+
+.subtitle-about{
+    font-family: 'Enchanted land';
+    font-weight: bolder;
+    font-size: 40px;
+    color: white;
+    background-color: #314e52;
+    border-radius: 10em;
+    max-width: 400px;
+    padding: 1%;
+    margin: auto;
+}
+
+div h3{
+    color: #314e52;
+    font-size: 37px;
+    font-family: 'Enchanted land';
+    margin: 0%;
+}
+
+.body-about{
+    font-family: 'Augusta';
+    font-size: 25px;
+    background-color: blanchedalmond;
+    color: #314e52;
+    border-radius: 2em;
+    padding: 1%;
+}
+
+.container-fotos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    max-height: 390px;
+    margin-top: 1%;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    margin: 2%;
+    border-radius: 2em;
+    align-items: center;
+}
+
+.card-text{
+    margin: 1%;
+    padding: 3%;
+    text-align: center;
+    font-family: 'Augusta';
+    color: #314e52;
+}
+
+.image{
+    border-radius: 50%;
+    max-width: 160px;
+    max-height: 160px;
+    margin: 2%;
+    text-align: center;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+    .title {
+        margin-top: 190px;
+    }
+
+    .container-fotos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 230px;
+        margin-bottom: 3em;
+    }
+    
+    .card-container {
+        margin: 1%;
+    }
+    
+    .image {
+        max-width: 100px;
+        max-height: 100px; 
+    }
+    
+    .card-text {
+        margin: 1%;
+        padding: 2%; 
+    }
+
+    .body {
+        padding: 1em;
+    }
+}

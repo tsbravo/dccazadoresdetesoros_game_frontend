@@ -1,0 +1,79 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #314e52;
+    width: 100%;
+    margin-top: 12em;
+    border-radius: 2em;
+}
+
+.container-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 2em;
+}
+
+.form-row{
+    font-family: 'Augusta';
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    align-self: flex-end;
+}
+
+input{
+    border-radius: 0.5em;
+    border: 1px solid #314e52;
+    width: 80%;
+    height: 3em;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+input:focus{
+    border: solid 2px rgb(0, 0, 0);
+}
+
+.button{
+    border-radius: 0.5em;
+    border: 1px solid #314e52;
+    padding: 0.3em;
+    width: 60%;
+    height: 2em;
+    font-size: 2.5em;
+    font-family: 'Enchanted land';
+    text-align: center;
+    background-color: #df9d3b;
+    color: #ffffff;
+    transition: ease 2ms;
+}
+
+.button:hover{
+    background-color: #9b743a;
+    cursor: pointer;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+
+.texto{
+    font-family: 'Enchanted land';
+    font-size: 5em;
+}
+
+fieldset{
+    border: none;
+}
+
+.dta{
+    font-family: 'Augusta';
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    align-self: flex-end;
+}

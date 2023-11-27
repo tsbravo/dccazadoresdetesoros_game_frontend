@@ -1,0 +1,100 @@
+.main-title-land{
+    margin-top: 3em;
+    text-align: center;
+    margin-bottom: 0%;
+    font-family: 'Deutsch Gothic';
+    font-size: 55px;
+    color: white;
+}
+
+.home-container{
+    display: flex;
+    align-items: center;
+    margin-top: 0%;
+    gap: 1em;
+}
+
+.container-1-land {
+    background-color: #314e52;
+    border-radius: 0px;
+    padding: 2em;
+    width: 40%;  
+    min-height: 500px;
+    border-radius: 10px;  
+    margin-left: 50px;
+}
+
+.container-2-land {
+    color: #ffffff;
+    padding: 1em;
+    width: 40%;  
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container1-text {
+    text-align: center;
+    font-size: 3em;
+    color: #ffffff;
+    font-family: 'Enchanted land';
+    padding: 1%;
+}
+
+#body-text h3{
+    font-size: 25px;
+    text-align: left;
+    margin-top: 2%;
+    color: #ffffff;
+    padding: 2%;
+    font-family: 'Augusta';
+}
+
+.container2-text{
+    font-size: 3em;
+    color: #ffffff;
+    font-family: 'Enchanted land';
+}
+
+.container2-img{
+    font-size: 1.5em;
+    font-family: 'Enchanted land';
+    justify-items: center;
+    margin: 0%;
+}
+
+.button-mago {
+    background-color: #df9d3b;
+    font-family: 'Enchanted land';
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 35px;
+    justify-content: left;
+    padding: 3%;
+}
+
+.button-mago:hover {
+background-color: #9b743a;
+}
+
+.mago-texto-land{
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    .container1, .container2 {
+        width: 100%; 
+        min-height: auto; 
+  }
+
+  .home-container{
+      flex-direction: column;
+      text-align: center;
+  }
+  .main-title{
+      margin-top: 180px;
+  }
+}
