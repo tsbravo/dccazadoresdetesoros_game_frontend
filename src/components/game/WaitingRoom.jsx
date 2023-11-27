@@ -110,14 +110,14 @@ export default function WaitingRoom() {
                     <div className="map-container">
                         <div className='mapa1'>
                             <button className='button-mapa1' onClick={() => handleMapSelection(1)}>
-                                <img src="imgs/mapa1.png" alt="" className='img1'/>
+                                <img src="/imgs/mapa1.png" alt="" className='img1'/>
                             </button>
                             <p className="descripcion">Explora un mapa diverso con bosques mágicos, 
                             frescas cavernas de hielo y desiertos sofocantes.</p>
                         </div>
                         <div className='mapa2'>
                             <button className='button-mapa2' onClick={() => handleMapSelection(2)}>
-                                <img src="imgs/mapa2.png" alt="" className='img2'/>
+                                <img src="/imgs/mapa2.png" alt="" className='img2'/>
                             </button>
                             <p className="descripcion">Navega por un mapa donde islas heladas, 
                             mares en furia y temibles volcanes te esperan en cada rincón.</p>
