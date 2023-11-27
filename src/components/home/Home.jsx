@@ -1,7 +1,7 @@
 import NavBar from "../common/NavBar";
 import './Home.css'
 import { useNavigate } from "react-router-dom";
-import 'assets/fonts/enchanted_land/Enchanted-Land.ttf';
+import '.../assets/fonts/enchanted_land/Enchanted-Land.ttf';
 
 export default function Home() {
     const navigate = useNavigate();
