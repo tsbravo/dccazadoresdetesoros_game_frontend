@@ -12,7 +12,7 @@
   }
 
 .popup-button{
-  font-family: 'Enchanted land';
+  font-family: 'Enchanted-Land';
   font-size: 22px;
 }
 
@@ -29,7 +29,7 @@
   max-width: 650px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  font-family: 'Enchanted land';
+  font-family: 'Enchanted-Land';
 }
 
 .popup-inner .boton-cerrar {
@@ -41,6 +41,6 @@
   border: none;
   cursor: pointer;
   color: darkslategray;
-  font-family: 'Enchanted land';
+  font-family: 'Enchanted-Land';
   font-size: 20px;
 }

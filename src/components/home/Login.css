@@ -46,7 +46,7 @@ input:focus{
     width: 60%;
     height: 2em;
     font-size: 2.5em;
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     text-align: center;
     background-color: #df9d3b;
     color: #ffffff;
@@ -62,7 +62,7 @@ input:focus{
 
 
 .texto{
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     font-size: 5em;
 }
 

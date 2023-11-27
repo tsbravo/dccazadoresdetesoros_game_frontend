@@ -15,7 +15,7 @@
 }
 
 .mensaje {
-  font-family: 'Enchanted land';
+  font-family: 'Enchanted-Land';
   color: #fff;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .titulo {
-  font-family: 'Enchanted land';
+  font-family: 'Enchanted-Land';
   color: #fff;
   font-size: 2em;
   margin-top: 3em;
@@ -60,7 +60,7 @@
 
 .button-juego {
     display: flex;
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     font-size: 25px;
     margin: 2%;
     align-items: center;

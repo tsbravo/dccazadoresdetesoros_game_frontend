@@ -9,7 +9,7 @@
 }
 
 .title-about{
-    font-family: 'Deutsch gothic';
+    font-family: 'Deutsch-Gothic';
     font-weight: bolder;
     font-size: 3em;
     color: white;
@@ -18,7 +18,7 @@
 }
 
 .subtitle-about{
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     font-weight: bolder;
     font-size: 40px;
     color: white;
@@ -32,7 +32,7 @@
 div h3{
     color: #314e52;
     font-size: 37px;
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     margin: 0%;
 }
 

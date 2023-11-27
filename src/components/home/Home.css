@@ -1,4 +1,3 @@
-
 .main-title-land{
     margin-top: 3em;
     text-align: center;
@@ -40,7 +39,7 @@
     text-align: center;
     font-size: 3em;
     color: #ffffff;
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     padding: 1%;
 }
 
@@ -56,19 +55,19 @@
 .container2-text{
     font-size: 3em;
     color: #ffffff;
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
 }
 
 .container2-img{
     font-size: 1.5em;
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     justify-items: center;
     margin: 0%;
 }
 
 .button-mago {
     background-color: #df9d3b;
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     color: #fff;
     border-radius: 5px;
     cursor: pointer;

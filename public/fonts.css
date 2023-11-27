@@ -4,7 +4,7 @@
     src: url('/assets/fonts/enchanted_land.otf') format('otf');
 }
 @font-face {
-    font-family: 'Deutsch-gothic';
+    font-family: 'Deutsch-Gothic';
     font-display: fallback;
     src: url('/assets/fonts/deutsch.ttf') format("truetype");
 }

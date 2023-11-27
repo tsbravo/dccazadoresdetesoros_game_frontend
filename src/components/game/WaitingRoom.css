@@ -6,14 +6,14 @@
 #texto-wait{
     margin-top: 3em;
     color: #ffffff;
-    font-family: 'Deutsch gothic';
+    font-family: 'Deutsch-Gothic';
     font-size: 50px;
     text-align: center;
 }
 
 .texto-wait{
     color: #ffffff;
-    font-family: 'Deutsch gothic';
+    font-family: 'Deutsch-Gothic';
     font-size: 60px;
     text-align: center;
     background-color: #314e52;
@@ -22,7 +22,7 @@
 }
 
 .players-text{
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     font-size: 40px;
     margin: 20px;
 }
@@ -86,7 +86,7 @@
 
 .boton-volver {
     background-color: #df9d3b;
-    font-family: 'Enchanted land';
+    font-family: 'Enchanted-Land';
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -137,7 +137,6 @@
     margin-left: 1em;
     margin-right: 1em;
     border-radius: 15px;
-    /* background-color: #314e52; */
 }
 
 .text-players-container{

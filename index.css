@@ -10,7 +10,7 @@ body{
     src: url('/fonts/Enchanted-Land.ttf') format("truetype");
 }
 @font-face {
-    font-family: 'Deutsch-gothic';
+    font-family: 'Deutsch-Gothic';
     font-display: fallback;
     src: url('/fonts/deutsch.ttf') format("truetype");
 }
