@@ -1,12 +1,15 @@
 @font-face {
-    font-family: 'Enchanted land';
-    src: url('/fonts/enchanted_land.otf') format('opentype');
+    font-family: 'Enchanted-land';
+    font-display: fallback;
+    src: url('/assets/fonts/enchanted_land.otf') format('otf');
 }
 @font-face {
-    font-family: 'Deutsch Gothic';
-    src: url('/fonts/deutsch.ttf') format('opentype');
+    font-family: 'Deutsch-gothic';
+    font-display: fallback;
+    src: url('/assets/fonts/deutsch.ttf') format('ttf');
 }
 @font-face {
     font-family: 'Augusta';
-    src: url('/fonts/augusta.ttf') format('opentype');
+    font-display: fallback;
+    src: url('/assets/fonts/augusta.ttf') format('ttf');
 }
