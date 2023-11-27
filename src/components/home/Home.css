@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'EnchantedLand';
-    src: url('.../assets/fonts/Enchanted-Land.ttf') format("truetype");
+    src: url('../../../assets/fonts/Enchanted-Land.ttf') format("truetype");
 }
 
 .main-title-land{
