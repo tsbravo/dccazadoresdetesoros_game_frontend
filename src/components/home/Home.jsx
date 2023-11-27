@@ -1,9 +1,6 @@
 import NavBar from "../common/NavBar";
 import './Home.css'
-// import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-// import { UserContext } from "../../contexts/userContext";
-import 'public/fonts.css';
 
 export default function Home() {
     const navigate = useNavigate();

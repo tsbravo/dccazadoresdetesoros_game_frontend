@@ -4,6 +4,7 @@ import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import React, { useState } from 'react'
 import Popup from '../common/popUp'
+import API_URL from "../../config";
 
 export default function Register() {
 
@@ -18,7 +19,7 @@ export default function Register() {
             email: event.target.email.value,
             password: event.target.password.value,
         }
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/register`, data)
+        axios.post(`${API_URL}/register`, data)
             .then(res => {
                 handleRouteChange()
             }).catch(err => {

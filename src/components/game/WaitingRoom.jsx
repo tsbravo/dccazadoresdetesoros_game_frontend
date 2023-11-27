@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../contexts/userContext";
 import axios from "axios";
 import Popup from "../common/popUp";
+import API_URL from "../../config";
 
 export default function WaitingRoom() {
     const [selectedMap, setSelectedMap] = useState(null);
@@ -17,7 +18,7 @@ export default function WaitingRoom() {
     const navigate = useNavigate();
 
     const updatePlayerList = (mapType) => {
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/game`, {
+        axios.post(`${API_URL}/game`, {
             username: user.username,
             map_type: mapType
         })
@@ -57,7 +58,7 @@ export default function WaitingRoom() {
     };
 
     const startExpedition = () => {
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/create`, { 
+        axios.post(`${API_URL}/game/create`, { 
             map_type: selectedMap, 
             username: user.username
         })

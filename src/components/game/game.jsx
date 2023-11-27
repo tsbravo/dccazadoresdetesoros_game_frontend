@@ -12,6 +12,7 @@ import axios from 'axios';
 import { changeCellClass } from "./board";
 import Popup from '../common/popUp';
 import { data } from "./GameStats";
+import API_URL from '../../config';
 
 function Game() {
     
@@ -70,7 +71,7 @@ function Game() {
     };
     // Obtener game id, user id, actualizar recursos iniciales
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_BACKEND_URL}/game/${user.username}`)
+        axios.get(`${API_URL}/game/${user.username}`)
         .then((response) => {
             setUserId(response.data.user_id);
             setGameId(response.data.game_id);
@@ -80,12 +81,12 @@ function Game() {
         .catch((error) => {
             console.log(error)
         })
-        axios.get(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/show`)
+        axios.get(`${API_URL}/game/${gameId}/show`)
         .then((response) => {
             const allPlayersTreasures = response.data.treasures;
             setPlayerTreasures(allPlayersTreasures);
         })
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/resources`, {
+        axios.post(`${API_URL}/game/resources`, {
             user_id: userId
         })
         .then((response) => {
@@ -109,7 +110,7 @@ function Game() {
 
     // Obtener actualización juego (jugador actual y posiciones de los jugadores)
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/show`)
+        axios.get(`${API_URL}/game/${gameId}/show`)
         .then((response) => {
             setCurrentPlayer(response.data.turn);
             const positions = response.data.positions;
@@ -143,7 +144,7 @@ function Game() {
 
     // Obtener nombres de usuarios
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_BACKEND_URL}/users/${map}/usernames`)
+        axios.get(`${API_URL}/users/${map}/usernames`)
         .then((response) => {
             console.log(response.data.usernames)
             if(response.data.usernames.length >= 2){
@@ -155,7 +156,7 @@ function Game() {
         .catch((error) => {
             console.log(error)
         })
-        axios.get(`${import.meta.env.VITE_BACKEND_URL}/map/${map}/load`)
+        axios.get(`${API_URL}/map/${map}/load`)
             .then((response) => {
                 setMapData(response.data.cells);
                 Object.entries(mapData).forEach(([cellNumber, type]) => {
@@ -189,7 +190,7 @@ function Game() {
 
     useEffect(() => {
         console.log('Recurso actualizado:', chosenResource);
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/confrontation`, { 
+        axios.post(`${API_URL}/game/${gameId}/confrontation`, { 
             user_id: userId,
             resource: chosenResource,
         })
@@ -213,14 +214,14 @@ function Game() {
         // setEffect(prevEffect => prevEffect + 1);
         try {
             // Actualizar información juego
-            axios.get(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/show`)
+            axios.get(`${API_URL}/game/${gameId}/show`)
             .then((response) => {
                 const allPlayersTreasures = response.data.treasures;
                 setPlayerTreasures(allPlayersTreasures);
             })
 
             // Mandar nueva posición
-            axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/move`, {
+            axios.post(`${API_URL}/game/${gameId}/move`, {
                 movements: numMoves,
                 user_id: userId
             })
@@ -275,7 +276,7 @@ function Game() {
             })
 
             // Actualizar stats jugador
-            // axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/stats`, { 
+            // axios.post(`${API_URL}/game/${gameId}/stats`, { 
             //     user_id: userId,
             // })
             // .then((response) => {
@@ -331,7 +332,7 @@ function Game() {
 
     // Tirar dado
     const throwDice = () => {
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/dice`, { 
+        axios.post(`${API_URL}/game/${gameId}/dice`, { 
             user_id: userId 
         })
         .then((response) => {
@@ -376,7 +377,7 @@ function Game() {
 
     const exitGame = () => {
         navigate('/');
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/exit`, { 
+        axios.post(`${API_URL}/game/${gameId}/exit`, { 
             user_id: userId 
         })
         .then((response) => {

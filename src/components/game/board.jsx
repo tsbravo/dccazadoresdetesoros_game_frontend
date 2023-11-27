@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useContext, useEffect } from "react";
 import './board.css';
 import { UserContext } from "../../contexts/userContext";
+import API_URL from "../../config";
 
 let mapData = {};
 
@@ -43,7 +44,7 @@ export default function Board({ mapType }) {
 
     // obtiene el gameId
     const savePosition = (position) => {
-        axios.get(`${import.meta.env.VITE_BACKEND_URL}/game/${user.username}`)
+        axios.get(`${API_URL}/game/${user.username}`)
         .then((response) => {
             setGameId(response.data.game_id);
             const detail = response.data.detail;
@@ -53,7 +54,7 @@ export default function Board({ mapType }) {
             console.log(error);
         })
         // Revisa si la posición está bien
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/cell`, {
+        axios.post(`${API_URL}/game/${gameId}/cell`, {
             position: position,
             user_id: user.id,
             game_id: gameId
@@ -70,7 +71,7 @@ export default function Board({ mapType }) {
     // Cargar mapa
     useEffect(() => {
         if (!mapLoaded) {
-            axios.get(`${import.meta.env.VITE_BACKEND_URL}/map/${mapType}/load`)
+            axios.get(`${API_URL}/map/${mapType}/load`)
             .then((response) => {
                 mapData  = response.data.cells;
                 setMapLoaded(true);
@@ -122,7 +123,7 @@ export async function moveFicha(hexNumber, newClass, currentPlayer, map) {
     const oldCells = document.getElementsByClassName(`ficha-jugador-${currentPlayer}`);
     for (const oldCell of Array.from(oldCells)) {
       try {
-        const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/map/cell/type`, {
+        const response = await axios.post(`${API_URL}/map/cell/type`, {
           cell: oldCell.id,
           mapType: map
         });

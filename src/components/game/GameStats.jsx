@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Popup from "../common/popUp";
 import PropTypes from 'prop-types';
+import API_URL from "../../config";
 
 
 export const data = {
@@ -87,7 +88,7 @@ export default function GameStats({
   }, [gameId])
 
   useEffect(() => {
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/stats`, { 
+    axios.post(`${API_URL}/game/${gameId}/stats`, { 
       user_id: userId,
     })
     .then((response) => {
@@ -110,7 +111,7 @@ export default function GameStats({
   // Crear Pociones
   const togglePotions = (type) => {
     if (userId != 0 && idGame != 0){
-      axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${idGame}/potion`, {
+      axios.post(`${API_URL}/game/${idGame}/potion`, {
         user_id: userId,
         potion: type
       })
@@ -140,7 +141,7 @@ export default function GameStats({
   // Crear hechizos
   const toggleSpells = (type) => {
     if (userId != 0 && idGame != 0){
-      axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${idGame}/spell`, {
+      axios.post(`${API_URL}/game/${idGame}/spell`, {
         user_id: userId,
         spell: type
         
@@ -184,7 +185,7 @@ export default function GameStats({
         )
         setIsOpenPopup(true);
       } else if (type === 'Elixir de Protección') {
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/potion/use`, { 
+        axios.post(`${API_URL}/game/${gameId}/potion/use`, { 
           user_id: userId,
           potion: type,
         })
@@ -217,7 +218,7 @@ export default function GameStats({
   const utilizeSpells = (type) => {
     if (userId != 0 && idGame != 0){
       if (type === "Éxtasis de Experiencia" || type === "Despojo de Recursos") {
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/spell/use`, { 
+        axios.post(`${API_URL}/game/${gameId}/spell/use`, { 
           user_id: userId,
           spell: type,
         })
@@ -263,7 +264,7 @@ export default function GameStats({
   }
 
   const handleMemberClick = (member, potion) => {
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/potion/use`, { 
+    axios.post(`${API_URL}/game/${gameId}/potion/use`, { 
       user_id: userId,
       potion: potion,
       member: member,
@@ -292,7 +293,7 @@ export default function GameStats({
   };
 
   const handleOpponentClick = (opponent, spell) => {
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/game/${gameId}/spell/use`, { 
+    axios.post(`${API_URL}/game/${gameId}/spell/use`, { 
       user_id: userId,
       spell: spell,
       opponent: opponent,

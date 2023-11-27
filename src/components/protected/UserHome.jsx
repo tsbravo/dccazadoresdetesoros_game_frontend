@@ -4,6 +4,7 @@ import { UserContext } from "../../contexts/userContext";
 import NavBar from "../common/NavBar";
 import Popup from '../common/popUp';
 import './UserHome.css'
+import API_URL from "../../config";
 
 export default function UserHome(){
     const { token } = useContext(UserContext);
@@ -16,7 +17,7 @@ export default function UserHome(){
     
     const config = {
         'method': 'get',
-        'url': `${import.meta.env.VITE_BACKEND_URL}/rutasprotegidas/admin`,
+        'url': `${API_URL}/rutasprotegidas/admin`,
         'headers': {
             'Authorization' : `Bearer ${token}`
         } 
@@ -24,7 +25,7 @@ export default function UserHome(){
 
     const findGames = {
         'method': 'get',
-        'url': `${import.meta.env.VITE_BACKEND_URL}/rutasprotegidas/games`,
+        'url': `${API_URL}/rutasprotegidas/games`,
         'headers': {
             'Authorization' : `Bearer ${token}`
         } 
@@ -32,7 +33,7 @@ export default function UserHome(){
 
     const findWaitRooms = {
         'method': 'get',
-        'url': `${import.meta.env.VITE_BACKEND_URL}/rutasprotegidas/waitrooms`,
+        'url': `${API_URL}/rutasprotegidas/waitrooms`,
         'headers': {
             'Authorization' : `Bearer ${token}`
         } 
@@ -75,7 +76,7 @@ export default function UserHome(){
     const deleteGame = (gameId) => {
         const deleteGameR = {
             'method': 'delete',
-            'url': `${import.meta.env.VITE_BACKEND_URL}/rutasprotegidas/games/${gameId}`,
+            'url': `${API_URL}/rutasprotegidas/games/${gameId}`,
             'headers': {
                 'Authorization' : `Bearer ${token}`
             } 
@@ -98,7 +99,7 @@ export default function UserHome(){
     const deleteWaitRoom = (waitId) => {
         const deleteWaitRoomR = {
             'method': 'delete',
-            'url': `${import.meta.env.VITE_BACKEND_URL}/rutasprotegidas/waitrooms/${waitId}`,
+            'url': `${API_URL}/rutasprotegidas/waitrooms/${waitId}`,
             'headers': {
                 'Authorization' : `Bearer ${token}`
             } 

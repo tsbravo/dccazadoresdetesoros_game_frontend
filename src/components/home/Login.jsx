@@ -5,6 +5,7 @@ import { UserContext } from "../../contexts/userContext";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Popup from '../common/popUp';
+import API_URL from "../../config";
 
 
 export default function Login() {
@@ -40,7 +41,7 @@ export default function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, data)
+        axios.post(`${API_URL}/login`, data)
             .then(res => {
                 console.log(res.data)
                 const accessToken = res.data.access_token;
