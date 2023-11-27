@@ -6,10 +6,10 @@
 @font-face {
     font-family: 'Deutsch-gothic';
     font-display: fallback;
-    src: url('/assets/fonts/deutsch.ttf') format('ttf');
+    src: url('/assets/fonts/deutsch.ttf') format("truetype");
 }
 @font-face {
     font-family: 'Augusta';
     font-display: fallback;
-    src: url('/assets/fonts/augusta.ttf') format('ttf');
+    src: url('/assets/fonts/augusta.ttf') format("truetype");
 }
