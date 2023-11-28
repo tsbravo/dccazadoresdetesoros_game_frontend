@@ -97,7 +97,7 @@ export default function UserHome(){
                 </>
             )
         });
-        reload();
+        // reload();
     };
 
     const reload = () => {
