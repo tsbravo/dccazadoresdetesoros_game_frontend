@@ -39,16 +39,15 @@ export default function UserHome(){
         } 
     }
 
-
-
-
     useEffect(() => {
         axios(config).then((response) => {
             setMsg(`Bienvenido Admin!`)
         }).catch((err) => {
             setMsg("No eres admin")
         })
+    }, [])
 
+    useEffect(() => {
         axios(findGames).then((response) => {
             console.log(response);
             const formattedGames = response.data.games.map(item => item);
@@ -61,6 +60,9 @@ export default function UserHome(){
                 </>)
             setIsOpenPopup(true)
         })
+    }, [])
+
+    useEffect(() => { 
         axios(findWaitRooms).then((response) => {
             console.log(response)
             const formattedWaitRooms = response.data.WaitUsers.map(item => item);
@@ -119,7 +121,6 @@ export default function UserHome(){
             )
         });
     };
-    
 
     return (
         <div className="home-container1">
@@ -140,8 +141,8 @@ export default function UserHome(){
                 <div className="games-container">
                     {Array.isArray(games) && games.lenght > 0 ? games.map((game, index) => (
                         <div key={index}>
-                            <h2>{game.id}</h2>
-                            <h2>{game.totalPlayers}</h2>
+                            <h2>Id del juego: {game.id}</h2>
+                            <h2>Cantidad de jugadores: {game.totalPlayers}</h2>
                             <button className="boton-borrar" onClick={() => deleteGame(game.id)}>
                                 Borrar juego
                             </button>
@@ -153,8 +154,12 @@ export default function UserHome(){
                 <div className="waitrooms-container">
                     {Array.isArray(waitRooms) && waitRooms.length > 0 ? waitRooms.map((wait, index) => (
                         <div key={index}>
-                            <h2>{wait.id}</h2>
-                            <h2>{wait.mapType ? wait.mapType : 'Tipo de mapa no disponible'}</h2>
+                            <h2>Id de sala: {wait.id}</h2>
+                            <h2>Tipo de mapa: {wait.mapType ? wait.mapType : 'Tipo de mapa no disponible'}</h2>
+                            <h2>Usuario 1: {wait.username1 ? wait.username1 : 'Espacio vacío'}</h2>
+                            <h2>Usuario 2: {wait.username2 ? wait.username2 : 'Espacio vacío'}</h2>
+                            <h2>Usuario 3: {wait.username3 ? wait.username3 : 'Espacio vacío'}</h2>
+                            <h2>Usuario 4: {wait.username4 ? wait.username4 : 'Espacio vacío'}</h2>
                             <button className="boton-borrar" onClick={() => deleteWaitRoom(wait.id)}>
                                 Borrar sala de espera
                             </button>

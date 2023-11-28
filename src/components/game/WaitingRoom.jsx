@@ -30,6 +30,12 @@ export default function WaitingRoom() {
                 playerData.username_3,
                 playerData.username_4
             ]);
+            setPopupMsg(
+                <>
+                <p>{response.data.detail}</p>
+                </>
+            )
+            setIsOpenPopup(true)
         })
         .catch((error) => {
             console.log(error);
