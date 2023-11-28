@@ -139,7 +139,7 @@ export default function UserHome(){
             </div>
             <div className="games-waitrooms-wrapper">
                 <div className="games-container">
-                    {Array.isArray(games) && games.lenght > 0 ? games.map((game, index) => (
+                    {Array.isArray(games) && games.length > 0 ? games.map((game, index) => (
                         <div key={index}>
                             <h2>Id del juego: {game.id}</h2>
                             <h2>Cantidad de jugadores: {game.totalPlayers}</h2>
