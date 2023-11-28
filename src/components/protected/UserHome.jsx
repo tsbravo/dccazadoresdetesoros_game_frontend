@@ -97,6 +97,22 @@ export default function UserHome(){
                 </>
             )
         });
+        reload();
+    };
+
+    const reload = () => {
+        axios(findGames).then((response) => {
+            console.log(response);
+            const formattedGames = response.data.games.map(item => item);
+
+            setGames(formattedGames)
+        }).catch((error) => {
+            setPopupMsg(
+                <>
+                    <p>{error.response.data.detail}</p>
+                </>)
+            setIsOpenPopup(true)
+        })
     };
 
     const deleteWaitRoom = (waitId) => {
