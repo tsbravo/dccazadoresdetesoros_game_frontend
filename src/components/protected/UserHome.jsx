@@ -50,6 +50,7 @@ export default function UserHome(){
         })
 
         axios(findGames).then((response) => {
+            console.log(response);
             const formattedGames = response.data.games.map(item => item);
 
             setGames(formattedGames)

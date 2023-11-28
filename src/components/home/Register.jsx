@@ -23,7 +23,11 @@ export default function Register() {
             .then(res => {
                 handleRouteChange()
             }).catch(err => {
-                setPopupMsg(err.data)
+                setPopupMsg(
+                    <>
+                    <p>{err.response.data.detail}</p>
+                    </>
+                )
                 setIsOpenPopup(true)
                 console.log(err)
             })

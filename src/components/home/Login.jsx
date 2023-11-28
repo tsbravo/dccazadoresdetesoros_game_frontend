@@ -51,7 +51,11 @@ export default function Login() {
                 setUser(res.data.user)
                 handleRouteChange()
             }).catch(err => {
-                setPopupMsg(err.response.data.detail)
+                setPopupMsg(
+                    <>
+                    <p>{err.response.data.detail}</p>
+                    </>
+                )
                 setIsOpenPopup(true)
                 console.log(err.response.data.detail)
             })
