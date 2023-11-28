@@ -49,7 +49,6 @@ function Game() {
             currentPlayer,
             playerPositions,
             fichas,
-            // Agrega aquí otros estados que quieras guardar
         };
         localStorage.setItem('gameState', JSON.stringify(gameState));
     }, [currentPlayer, playerPositions, fichas]);
@@ -61,13 +60,11 @@ function Game() {
             setCurrentPlayer(gameState.currentPlayer);
             setPlayerPositions(gameState.playerPositions);
             setFichas(gameState.fichas);
-            // Establece aquí otros estados guardados
         }
     }, []);
 
     const clearGameState = () => {
         localStorage.removeItem('gameState');
-        // Aquí también puedes resetear los estados del componente si es necesario
     };
     // Obtener game id, user id, actualizar recursos iniciales
     useEffect(() => {
@@ -211,7 +208,6 @@ function Game() {
     }, [chosenResource, gameId, userId]);
 
     const togglePlayer = () => {
-        // setEffect(prevEffect => prevEffect + 1);
         try {
             // Actualizar información juego
             axios.get(`${API_URL}/game/${gameId}/show`)
@@ -274,29 +270,6 @@ function Game() {
                 console.log(error);
                 console.log(error.response.data.detail);
             })
-
-            // Actualizar stats jugador
-            // axios.post(`${API_URL}/game/${gameId}/stats`, { 
-            //     user_id: userId,
-            // })
-            // .then((response) => {
-            //     setPlayerResources({
-            //         'Fuego': response.data.fire,
-            //         'Agua': response.data.water,
-            //         'Hielo': response.data.ice,
-            //     });
-            //     setPlayerEnergy({
-            //         'Guerrero': response.data.warrior_energy,
-            //         'Curandero': response.data.healer_energy,
-            //         'Mago': response.data.wizard_energy,
-            //     });
-            //     setPlayerExperience(response.data.experience);
-            //     setPlayerPotions(response.data.potions);
-            //     setPlayerSpells(response.data.spells);
-            // })
-            // .catch((error) => {
-            //     console.log(error);
-            // })
         } catch (error) {
             console.error(error);
         }
@@ -419,9 +392,6 @@ function Game() {
                         <button className="button-juego" onClick={togglePlayer}>Terminar Turno</button>
                         <button className="button-juego" onClick={exitGame}>Abandonar partida</button>
                         
-                    </div>
-                    <div className="mensaje">
-                        {/* <h3>Mensaje : {message}</h3> */}
                     </div>
                 </div>
                 <div className="panel">

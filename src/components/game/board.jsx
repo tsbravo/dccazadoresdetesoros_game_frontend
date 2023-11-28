@@ -23,23 +23,20 @@ export default function Board({ mapType }) {
     useEffect(() => {
         const boardState = {
             fichas,
-            // Agrega aquí otros estados que quieras guardar
         };
         localStorage.setItem('boardState', JSON.stringify(boardState));
-    }, [fichas]); // Agrega aquí otros estados que quieras observar
+    }, [fichas]);
 
     useEffect(() => {
         const savedBoardState = localStorage.getItem('boardState');
         if (savedBoardState) {
             const boardState = JSON.parse(savedBoardState);
             setFichas(boardState.fichas);
-            // Establece aquí otros estados guardados
         }
     }, []);
 
     const clearBoardState = () => {
         localStorage.removeItem('boardState');
-        // Aquí también puedes resetear los estados del componente si es necesario
     };
 
     // obtiene el gameId

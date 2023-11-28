@@ -61,7 +61,6 @@ export default function GameStats({
         recursos,
         hechizos,
         pociones,
-        // Otros estados relevantes
     };
     localStorage.setItem('statsState', JSON.stringify(statsState));
   }, [energia, recursos, hechizos, pociones]);
@@ -74,13 +73,11 @@ export default function GameStats({
         setRecursos(statsState.recursos);
         setHechizos(statsState.hechizos);
         setPociones(statsState.pociones);
-        // Establece aquí otros estados guardados
     }
   }, []);
 
   const clearStatsState = () => {
     localStorage.removeItem('statsState');
-    // Aquí también puedes resetear los estados del componente si es necesario
   };
 
   useEffect(() => {
@@ -214,7 +211,7 @@ export default function GameStats({
     }
   }
 
-  // Usar Hechizos NO LISTO
+  // Usar Hechizos
   const utilizeSpells = (type) => {
     if (userId != 0 && idGame != 0){
       if (type === "Éxtasis de Experiencia" || type === "Despojo de Recursos") {
